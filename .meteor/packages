@@ -21,3 +21,5 @@ kadira:flow-router
 semantic:ui
 flemay:less-autoprefixer
 underscore
+kadira:blaze-layout
+arillo:flow-router-helpers
