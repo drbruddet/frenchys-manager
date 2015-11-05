@@ -1,3 +1,11 @@
+Meteor.subscribe('brands');
+
+Template.deliveryForm.helpers({
+	brands: function() {
+		return Brands.find({}, {fields: {'brand':1}});
+	}
+});
+
 Template.deliveryForm.events({
 	'submit .new-delivery': function(event) {
 		event.preventDefault();

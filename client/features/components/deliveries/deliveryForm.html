@@ -1,19 +1,24 @@
 <template name="deliveryForm">
 	<form class="ui form new-delivery">
 		<div class="four inline fields">
-			<div class="field">
+			<div class="wide three field">
 				<label>Date</label>
 				<input type="date" name="date" placeholder="Date">
 			</div>
-			<div class="field">
+			<div class="wide four field">
 				<label>Marque</label>
-				<input type="text" name="brand" placeholder="Marque">
+				<select class="ui search dropdown" name="brand">
+      				<option value="">Selectionner Marque</option>
+      				{{#each brands}}
+      					<option value="{{brand}}">{{brand}}</option>
+      				{{/each}}
+    				</select>
 			</div>
-			<div class="field">
+			<div class="wide eight field">
 				<label>Description</label>
 				<input type="text" name="description" placeholder="Description">
 			</div>
-			<button class="ui button" type="submit" name="submit">Valider</button>
+			<button class="ui button icon right labeled teal" type="submit" name="submit"><i class="right checkmark icon"></i>Valider</button>
 		</div>
 	</form>
 </template>

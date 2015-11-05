@@ -23,3 +23,4 @@ flemay:less-autoprefixer
 underscore
 kadira:blaze-layout
 arillo:flow-router-helpers
+zimme:active-route

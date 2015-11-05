@@ -1,10 +1,14 @@
 <template name="header">
 	<div class="ui pointing menu">
-		<a class="active item" href="{{pathFor '/'}}">Arrivages</a>
-		<a class="item">Marques</a>
-		<a class="item">Employés</a>
-		<div class="right menu">
+		<a class="item {{isActiveRoute 'deliveries'}}" href="{{pathFor '/'}}"><i class="calendar icon"></i>Arrivages</a>
+		<a class="item"><i class="shop icon"></i>Actions Commerce</a>
+		<a class="item"><i class="mail icon"></i>Actions Marketing</a>
+		<a class="item"><i class="comments icon"></i>Online Meeting</a>
+		<a class="item"><i class="world icon"></i>Riders</a>
 
+		<div class="right menu">
+			<a class="item {{isActiveRoute 'brands'}}" href="{{pathFor '/brands'}}"><i class="tags icon"></i>Marques</a>
+			<a class="item"><i class="users icon"></i>Employés</a>
 		</div>
 	</div>
 </template>
