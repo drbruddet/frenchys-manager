@@ -1,0 +1,27 @@
+<template name="deliveriesList">
+	{{> Template.dynamic template=header}}
+	<div class="ui segment">
+			<p>
+				{{> deliveryForm}}
+
+				<div class="ui divider"></div>
+
+				<table class="ui compact celled definition table">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Date</th>
+							<th>Marque</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each deliveries}}
+							{{> delivery}}
+						{{/each}}
+					</tbody>
+				</table>
+
+			</p>
+	</div>
+</template>

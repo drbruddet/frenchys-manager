@@ -1,0 +1,25 @@
+<template name="brandsList">
+	{{> Template.dynamic template=header}}
+	<div class="ui segment">
+			<p>
+				{{> brandForm}}
+
+				<div class="ui divider"></div>
+
+				<table class="ui compact celled definition table">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Marque</th>
+							<th>Domaine</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each brands}}
+							{{> brand}}
+						{{/each}}
+					</tbody>
+				</table>
+			</p>
+	</div>
+</template>
