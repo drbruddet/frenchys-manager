@@ -1,20 +1,18 @@
-<template name="brandsList">
+<template name="usersList">
 	<div class="ui segment">
 			<p>
-				{{> brandForm}}
 				<div class="ui divider"></div>
-
 				<table class="ui compact celled definition table">
 					<thead>
 						<tr>
 							<th></th>
-							<th>Marque</th>
-							<th>Domaine</th>
+							<th>Email</th>
+							<th>Username</th>
 						</tr>
 					</thead>
 					<tbody>
-						{{#each brands}}
-							{{> brand}}
+						{{#each users}}
+							{{> user}}
 						{{/each}}
 					</tbody>
 				</table>
