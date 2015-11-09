@@ -1,6 +1,10 @@
 <template name="applicationLayout">
 	<div class="ui container">
-		{{> Template.dynamic template=menu}}
-  		{{> Template.dynamic template=container}}
+		{{#if currentUser}}
+			{{> Template.dynamic template=menu}}
+  			{{> Template.dynamic template=container}}
+  		{{else}}
+			{{> atForm state='signIn'}}
+  		{{/if}}
   	  </div>
 </template>

@@ -25,3 +25,6 @@ kadira:blaze-layout
 arillo:flow-router-helpers
 zimme:active-route
 aldeed:collection2
+accounts-password
+useraccounts:flow-routing
+useraccounts:semantic-ui
