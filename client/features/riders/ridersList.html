@@ -1,0 +1,56 @@
+<template name="ridersList">
+	<div class="ui segment">
+		<p>
+			{{> riderForm}}
+
+			<div class="ui divider"></div><br/>
+
+			<div class="ui styled fluid accordion">
+				<div class="title active"><i class="dropdown icon"></i> Freestyle Dept.</div>
+				<div class="content active">
+					<table class="ui very compact celled definition orange table">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Prénom</th>
+								<th>Nom</th>
+								<th>Marque(s)</th>
+								<th>Email</th>
+								<th>Téléphone</th>
+								<th>Adresse</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each ridersfreestyle}}
+							{{> rider}}
+							{{/each}}
+						</tbody>
+					</table>
+				</div>
+				<div class="title"><i class="dropdown icon"></i> Race Dept. </div>
+				<div class="content">
+					<table class="ui very compact celled definition teal table">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Prénom</th>
+								<th>Nom</th>
+								<th>Marque(s)</th>
+								<th>Email</th>
+								<th>Téléphone</th>
+								<th>Adresse</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each ridersrace}}
+							{{> rider}}
+							{{/each}}
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+
+		</p>
+	</div>
+</template>

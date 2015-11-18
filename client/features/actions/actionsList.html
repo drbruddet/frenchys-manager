@@ -1,26 +1,24 @@
-<template name="deliveriesList">
+<template name="actionsList">
 	<div class="ui segment">
 			<p>
-				{{> deliveryForm}}
-
+				{{> actionForm}}
 				<div class="ui divider"></div>
 
 				<table class="ui compact celled definition table">
 					<thead>
 						<tr>
 							<th></th>
-							<th>Date</th>
-							<th>Marque</th>
-							<th>Description</th>
+							<th>Zone</th>
+							<th>Personne en Charge</th>
+							<th>Action a faire</th>
 						</tr>
 					</thead>
 					<tbody>
-						{{#each deliveries}}
-							{{> delivery}}
+						{{#each actions}}
+							{{> action}}
 						{{/each}}
 					</tbody>
 				</table>
-
 			</p>
 	</div>
 </template>

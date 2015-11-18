@@ -1,0 +1,77 @@
+<template name="riderForm">
+	<button 
+		class="ui button icon right labeled teal newRiderButton" 
+		type="newRiderButton" 
+		name="newRiderButton">
+		<i class="right checkmark icon"></i>Nouveau Rider
+	</button>
+
+
+<div class="ui large modal">
+	<i class="close icon"></i>
+	<div class="header">Ajouter un rider</div>
+	<form class="ui form new-rider content">
+			<div class="field">
+				<div class="two fields">
+					<div class="four wide field">
+						<label>Prénom</label>
+						<input type="text" name="firstname" placeholder="Prénom">
+					</div>
+					<div class="four wide field">
+						<label>Nom</label>
+						<input type="text" name="lastname" placeholder="Nom">
+					</div>
+					<div class="three wide field">
+						<label>Catégorie</label>
+						<select class="ui search dropdown category" name="category">
+							<option value="">Catégorie</option>
+							<option value="freestyle">Freestyle</option>
+							<option value="race">Race</option>
+						</select>
+					</div>
+					<div class="five wide field">
+						<label>Marque(s)</label>
+						<select multiple="" class="ui search dropdown brand" name="brand">
+							<option value="">Marque(s)</option>
+							{{#each brands}}
+							<option value="{{brand}}">{{brand}}</option>
+							{{/each}}
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label>Coordonnées</label>
+				<div class="fields">
+					<div class="twelve wide field">
+						<input type="text" name="email" placeholder="Email">
+					</div>
+					<div class="four wide field">
+						<input type="text" name="phone" placeholder="Téléphone">
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label>Adresse</label>
+				<div class="fields">
+					<div class="nine wide field">
+						<input type="text" name="address" placeholder="Adresse">
+					</div>
+					<div class="three wide field">
+						<input type="text" name="postcode" placeholder="Code Postal">
+					</div>			
+					<div class="four wide field">
+						<input type="text" name="city" placeholder="Ville">
+					</div>
+				</div>
+			</div>
+		<div class="ui divider"></div>
+		<div class="actions">
+    <div id="new-rider-submit"  class="ui positive right labeled icon button">
+		<i class="right checkmark icon"></i>Valider
+    </div>
+  </div>
+	</form>
+</div>
+
+</template>

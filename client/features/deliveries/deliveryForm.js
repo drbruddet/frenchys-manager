@@ -26,3 +26,7 @@ Template.deliveryForm.events({
 		event.target.description.value = "";
 	}
 });
+
+Template.deliveryForm.rendered = function(){
+  $('select.dropdown').dropdown({ });
+}

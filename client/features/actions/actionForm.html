@@ -1,0 +1,37 @@
+<template name="actionForm">
+	<form class="ui form new-action">
+		<div class="inline fields">
+			<div class="five field">
+				<label>Zone</label>
+				<select class="ui search dropdown zone" name="zone">
+					<option value="">Zone d'action</option>
+					<option value="mailchimp">Mailchimp</option>
+					<option value="newslettercommerce">Newsletter Commerce</option>
+					<option value="vignetteb2b">Vignette B2B</option>
+					<option value="call">Appel Téléphonique</option>
+					<option value="visuelproduit">Visuel Produit(s)</option>
+				</select>
+			</div>
+			<div class="five field">
+				<label>Personne en Charge</label>
+				<select class="ui search dropdown user" name="user">
+					<option value="">Personnes en Charge</option>
+					{{#each users}}
+					<option value="{{user}}">{{email}}</option>
+					{{/each}}
+				</select>
+			</div>
+			<div class="six field">
+			<div class="ui toggle checkbox emergency">
+					<input type="checkbox" name="emergency">
+					<label>Urgent ?</label>
+				</div>
+			</div>
+		</div>
+		<div class="field">
+			<label>Action</label>
+			<textarea type="text" name="action" placeholder="Action a faire"></textarea>
+		</div>
+		<button class="ui button icon right labeled teal" type="submit" name="submit"><i class="right checkmark icon"></i>Valider</button>
+	</form>
+</template>
