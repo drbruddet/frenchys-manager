@@ -5,8 +5,7 @@
 		name="newRiderButton">
 		<i class="right checkmark icon"></i>Nouveau Rider
 	</button>
-
-
+	
 <div class="ui large modal">
 	<i class="close icon"></i>
 	<div class="header">Ajouter un rider</div>
@@ -25,8 +24,9 @@
 						<label>Catégorie</label>
 						<select class="ui search dropdown category" name="category">
 							<option value="">Catégorie</option>
-							<option value="freestyle">Freestyle</option>
-							<option value="race">Race</option>
+							{{#each categories}}
+								<option value="{{this}}">{{this}}</option>
+							{{/each}}
 						</select>
 					</div>
 					<div class="five wide field">
@@ -34,7 +34,7 @@
 						<select multiple="" class="ui search dropdown brand" name="brand">
 							<option value="">Marque(s)</option>
 							{{#each brands}}
-							<option value="{{brand}}">{{brand}}</option>
+								<option value="{{brand}}">{{brand}}</option>
 							{{/each}}
 						</select>
 					</div>

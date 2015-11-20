@@ -1,4 +1,9 @@
- Meteor.publish('allUsers', function() {
-   return Meteor.users.find({}, {fields:{username:1,emails:1}})
+ Meteor.publish('users', function() {
+   return Meteor.users.find();
  })
 
+Meteor.users.allow({
+    'insert': function (userId, doc) {
+     	return true; 
+    }
+  });

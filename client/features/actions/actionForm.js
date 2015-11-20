@@ -7,6 +7,18 @@ Template.actionForm.helpers({
 });
 
 Template.actionForm.helpers({
+	zones: function() {
+		return [
+			{value: 'mailchimp', label: 'Mailchimp'},
+			{value: 'vignetteB2B', label: 'vignette B2B' },
+			{value: 'call', label: 'Appel téléphonique'},
+			{value: 'newletterShopCommerce', label: 'newsletter Commerce'},
+			{value: 'VisuelProduit', label: 'Visuel Produit(s)'}
+		]
+	}
+});
+
+Template.actionForm.helpers({
   "email": function() {  
   	return this.emails[0].address; 
   }

@@ -6,7 +6,8 @@ Meteor.subscribe('brands');
 Template.riderForm.helpers({
 	brands: function() {
 		return Brands.find({}, {fields: {'brand':1}});
-	}
+	},
+	categories: ['Freestyle', 'Race']
 });
 
 Template.riderForm.rendered = function(){

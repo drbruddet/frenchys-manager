@@ -5,11 +5,9 @@
 				<label>Zone</label>
 				<select class="ui search dropdown zone" name="zone">
 					<option value="">Zone d'action</option>
-					<option value="mailchimp">Mailchimp</option>
-					<option value="newslettercommerce">Newsletter Commerce</option>
-					<option value="vignetteb2b">Vignette B2B</option>
-					<option value="call">Appel Téléphonique</option>
-					<option value="visuelproduit">Visuel Produit(s)</option>
+					{{#each zones}}
+						<option value="{{value}}">{{label}}</option>
+					{{/each}}
 				</select>
 			</div>
 			<div class="five field">

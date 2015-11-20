@@ -1,6 +1,7 @@
 <template name="usersList">
 	<div class="ui segment">
 			<p>
+				{{> userAdd}}
 				<div class="ui divider"></div>
 				<table class="ui compact celled definition table">
 					<thead>
@@ -12,7 +13,7 @@
 					</thead>
 					<tbody>
 						{{#each users}}
-							{{> user}}
+							{{> tableUser}}
 						{{/each}}
 					</tbody>
 				</table>

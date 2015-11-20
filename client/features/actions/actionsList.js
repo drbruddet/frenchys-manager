@@ -2,6 +2,9 @@ Meteor.subscribe('actions');
 
 Template.actionsList.helpers({
 	actions: function() {
-		return Actions.find();
+		var actions = Actions.find().fetch();
+		return _.sortBy(actions, function (a) { 
+			return !a.hasOwnProperty('emergency'); 
+		});
 	}
 });
