@@ -4,19 +4,16 @@ Template.userAdd.events({
 	'submit .new-user': function(event) {
 		event.preventDefault();
 
-		var email = $('input[name="email"]').val();;
-		var username = $('input[name="username"]').val();;
+		var email = $('input[name="email"]').val();
+		var password = $('input[name="password"]').val();
+		var firstname = $('input[name="firstname"]').val();
+		var lastname = $('input[name="lastname"]').val();
 
- 		Accounts.createUser({
- 			email: email,
- 			username: username,
- 			password: 'toto',
- 			profile: {
-
- 			}
- 		});
+		Meteor.call("createUsers", email, password, firstname, lastname);
 
 		event.target.email.value = "";
-		event.target.username.value = "";
+		event.target.password.value = "";
+		event.target.firstname.value = "";
+		event.target.lastname.value = "";
 	}
 });
