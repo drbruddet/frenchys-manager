@@ -1,12 +1,17 @@
 <template name="menu">
-	<div class="ui pointing menu">
+	<div class="ui fixed top menu">
 		<a class="item {{isActiveRoute 'deliveries'}}" href="{{pathFor '/'}}"><i class="calendar icon"></i>Arrivages</a>
 		<a class="item {{isActiveRoute 'actions'}}" href="{{pathFor '/actions'}}"><i class="mail icon"></i>Actions Marketing</a>
 		<a class="item {{isActiveRoute 'riders'}}" href="{{pathFor '/riders'}}"><i class="world icon"></i>Riders</a>
 		<a class="item {{isActiveRoute 'brands'}}" href="{{pathFor '/brands'}}"><i class="tags icon"></i>Marques</a>
 		<a class="item {{isActiveRoute 'users'}}" href="{{pathFor '/users'}}"><i class="users icon"></i>Employés</a>
 		<div class="right menu">
-			{{> atNavButton}}
-		</div>
+    			<div class="ui dropdown item">
+      			{{currentUser.username}} <i class="dropdown icon"></i>
+      			<div class="menu">
+        				<a class="item" id="at-nav-button">Se Déconnecter</a>
+      			</div>
+    			</div>
+  		</div>
 	</div>
 </template>

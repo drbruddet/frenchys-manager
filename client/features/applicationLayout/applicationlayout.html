@@ -2,7 +2,9 @@
 	<div class="ui container">
 		{{#if currentUser}}
 			{{> Template.dynamic template=menu}}
-  			{{> Template.dynamic template=container}}
+			<div class="ui main container">
+  				{{> Template.dynamic template=container}}
+  			</div>
   		{{else}}
 			{{> atForm state='signIn'}}
   		{{/if}}
