@@ -22,11 +22,13 @@ Template.deliveryForm.events({
 		});
 
 		event.target.date.value = "";
-		event.target.brand.value = "";
+		$('.dropdown').dropdown('restore defaults');
 		event.target.description.value = "";
 	}
 });
 
 Template.deliveryForm.rendered = function(){
-  $('select.dropdown').dropdown({ });
+  Meteor.defer(function() {
+    $('.dropdown').dropdown('restore defaults');
+  });
 }

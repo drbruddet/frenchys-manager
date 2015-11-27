@@ -11,8 +11,9 @@ Template.riderForm.helpers({
 });
 
 Template.riderForm.rendered = function(){
-	$('select.dropdown.brand').dropdown({});
-	$('select.dropdown.category').dropdown({});
+  	Meteor.defer(function() {
+    		$('.dropdown').dropdown('restore defaults');
+ 	 });
 }
 
 Template.riderForm.events({
@@ -51,6 +52,7 @@ Template.riderForm.events({
 				$('input[name="address"]').val("");
 				$('input[name="city"]').val("");
 				$('input[name="postcode"]').val("");
+				$('.dropdown').dropdown('restore defaults');
 
 				//$('select.dropdown.brand').dropdown('restore defaults');
 				//$('select.dropdown.category').dropdown('restore defaults');

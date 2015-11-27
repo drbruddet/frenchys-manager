@@ -38,8 +38,9 @@ Template.actionForm.onRendered(function () {
 // EMERGENCY STATE
 
 Template.actionForm.rendered = function(){
-	$('select.dropdown.zone').dropdown({});
-	$('select.dropdown.user').dropdown({});
+  	Meteor.defer(function() {
+    		$('.dropdown').dropdown('restore defaults');
+ 	 });
 }
 
 Template.actionForm.events({
@@ -61,6 +62,8 @@ Template.actionForm.events({
 
 		event.target.zone.value = "";
 		event.target.user.value = "";
+		$('.dropdown').dropdown('restore defaults');
 		event.target.action.value = "";
+		
 	}
 });
